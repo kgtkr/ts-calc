@@ -1,0 +1,1 @@
+type TupleToNum<T extends any[]> = T["length"];
