@@ -25,3 +25,13 @@ type Sub<A extends any[], B extends any[]> = {
   1: Sub<Dec<A>, Dec<B>>
 }[B extends [] ? 0 : 1];
 
+/*
+だめぽ…
+type Hyper<I extends any[], A extends any[], B extends any[]> = {
+  0: Add<A, B>,
+  1: {
+    0: A,
+    1: Hyper<Dec<I>, A, Hyper<I, A, Dec<B>>>
+  }[B extends [any] ? 0 : 1]
+}[I extends [] ? 0 : 1];
+*/
